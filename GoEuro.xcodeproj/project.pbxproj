@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470D6B3D1DFC4BEA005789B4 /* GoEuroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470D6B3C1DFC4BEA005789B4 /* GoEuroData.swift */; };
+		470D6B3F1DFC4ED6005789B4 /* GoEuroStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470D6B3E1DFC4ED6005789B4 /* GoEuroStruct.swift */; };
+		4724B01A1DFC69B0003E9412 /* TimeDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = 4724B0191DFC69B0003E9412 /* TimeDiff.m */; };
+		4724B01C1DFC8219003E9412 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724B01B1DFC8219003E9412 /* ImageManager.swift */; };
+		4724B0251DFC90EA003E9412 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4724B0241DFC90EA003E9412 /* CollectionCell.xib */; };
+		4724B02A1DFC9172003E9412 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724B0291DFC9172003E9412 /* CollectionViewCell.swift */; };
 		473B95E81DFBDB6300173508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B95E71DFBDB6300173508 /* AppDelegate.swift */; };
-		473B95EA1DFBDB6300173508 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B95E91DFBDB6300173508 /* ViewController.swift */; };
 		473B95ED1DFBDB6400173508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473B95EB1DFBDB6400173508 /* Main.storyboard */; };
 		473B95EF1DFBDB6400173508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473B95EE1DFBDB6400173508 /* Assets.xcassets */; };
 		473B95F21DFBDB6400173508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473B95F01DFBDB6400173508 /* LaunchScreen.storyboard */; };
 		473B95FD1DFBDB6400173508 /* GoEuroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B95FC1DFBDB6400173508 /* GoEuroTests.swift */; };
 		473B96081DFBDB6400173508 /* GoEuroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B96071DFBDB6400173508 /* GoEuroUITests.swift */; };
+		473B96191DFBDE9900173508 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B96181DFBDE9900173508 /* RootViewController.swift */; };
+		473B961D1DFBE83F00173508 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B961C1DFBE83F00173508 /* Images.swift */; };
+		473B96211DFC06C600173508 /* FlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B96201DFC06C600173508 /* FlightViewController.swift */; };
+		473B96231DFC072100173508 /* BusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B96221DFC072100173508 /* BusViewController.swift */; };
+		473B96251DFC073100173508 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B96241DFC073100173508 /* TrainViewController.swift */; };
+		93DC92EC26EA0A15BE600838 /* Pods_GoEuroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6053175BEC5FC0DDDEC591 /* Pods_GoEuroTests.framework */; };
+		B3D5ECA3F418649350EAF5AE /* Pods_GoEuro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52B17F388E8163CF9537BEE /* Pods_GoEuro.framework */; };
+		C02CCBBE837E4E418FE57BC4 /* Pods_GoEuroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F442907AC509C2B7E2CDE4F1 /* Pods_GoEuroUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +47,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0712B9DCC66AA97CA5C5D672 /* Pods-GoEuroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEuroUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoEuroUITests/Pods-GoEuroUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0B6405938632E692DDB0BCF7 /* Pods-GoEuroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEuroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoEuroTests/Pods-GoEuroTests.debug.xcconfig"; sourceTree = "<group>"; };
+		35478907BC0CD1280E0227FE /* Pods-GoEuroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEuroUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoEuroUITests/Pods-GoEuroUITests.release.xcconfig"; sourceTree = "<group>"; };
+		470D6B3C1DFC4BEA005789B4 /* GoEuroData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoEuroData.swift; sourceTree = "<group>"; };
+		470D6B3E1DFC4ED6005789B4 /* GoEuroStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoEuroStruct.swift; sourceTree = "<group>"; };
+		4724B0111DFC6917003E9412 /* GoEuro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoEuro-Bridging-Header.h"; sourceTree = "<group>"; };
+		4724B0181DFC69B0003E9412 /* TimeDiff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeDiff.h; sourceTree = "<group>"; };
+		4724B0191DFC69B0003E9412 /* TimeDiff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeDiff.m; sourceTree = "<group>"; };
+		4724B01B1DFC8219003E9412 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		4724B0241DFC90EA003E9412 /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		4724B0291DFC9172003E9412 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		473B95E41DFBDB6300173508 /* GoEuro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoEuro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		473B95E71DFBDB6300173508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		473B95E91DFBDB6300173508 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		473B95EC1DFBDB6400173508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		473B95EE1DFBDB6400173508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		473B95F11DFBDB6400173508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +70,17 @@
 		473B96031DFBDB6400173508 /* GoEuroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoEuroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		473B96071DFBDB6400173508 /* GoEuroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoEuroUITests.swift; sourceTree = "<group>"; };
 		473B96091DFBDB6400173508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		473B96181DFBDE9900173508 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		473B961C1DFBE83F00173508 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		473B96201DFC06C600173508 /* FlightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightViewController.swift; sourceTree = "<group>"; };
+		473B96221DFC072100173508 /* BusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusViewController.swift; sourceTree = "<group>"; };
+		473B96241DFC073100173508 /* TrainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
+		9E42363E5369EC5628F1EF5B /* Pods-GoEuro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEuro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoEuro/Pods-GoEuro.debug.xcconfig"; sourceTree = "<group>"; };
+		C52B17F388E8163CF9537BEE /* Pods_GoEuro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoEuro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB6053175BEC5FC0DDDEC591 /* Pods_GoEuroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoEuroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F442907AC509C2B7E2CDE4F1 /* Pods_GoEuroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoEuroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F62A84F3DF94A10993ECB73E /* Pods-GoEuro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEuro.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoEuro/Pods-GoEuro.release.xcconfig"; sourceTree = "<group>"; };
+		F9D78F8A80D02162D4CF8CF6 /* Pods-GoEuroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoEuroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoEuroTests/Pods-GoEuroTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D5ECA3F418649350EAF5AE /* Pods_GoEuro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93DC92EC26EA0A15BE600838 /* Pods_GoEuroTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +104,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02CCBBE837E4E418FE57BC4 /* Pods_GoEuroUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19B7047FDF9A18B0E94A6F37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E42363E5369EC5628F1EF5B /* Pods-GoEuro.debug.xcconfig */,
+				F62A84F3DF94A10993ECB73E /* Pods-GoEuro.release.xcconfig */,
+				0B6405938632E692DDB0BCF7 /* Pods-GoEuroTests.debug.xcconfig */,
+				F9D78F8A80D02162D4CF8CF6 /* Pods-GoEuroTests.release.xcconfig */,
+				0712B9DCC66AA97CA5C5D672 /* Pods-GoEuroUITests.debug.xcconfig */,
+				35478907BC0CD1280E0227FE /* Pods-GoEuroUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		473B95DB1DFBDB6300173508 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +131,8 @@
 				473B95FB1DFBDB6400173508 /* GoEuroTests */,
 				473B96061DFBDB6400173508 /* GoEuroUITests */,
 				473B95E51DFBDB6300173508 /* Products */,
+				19B7047FDF9A18B0E94A6F37 /* Pods */,
+				CB9857CB059422446EF6567A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +154,6 @@
 				473B96151DFBDB6D00173508 /* Model */,
 				473B95E71DFBDB6300173508 /* AppDelegate.swift */,
 				473B95EE1DFBDB6400173508 /* Assets.xcassets */,
-				473B95F01DFBDB6400173508 /* LaunchScreen.storyboard */,
 				473B95F31DFBDB6400173508 /* Info.plist */,
 			);
 			path = GoEuro;
@@ -129,6 +180,12 @@
 		473B96151DFBDB6D00173508 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				470D6B3C1DFC4BEA005789B4 /* GoEuroData.swift */,
+				470D6B3E1DFC4ED6005789B4 /* GoEuroStruct.swift */,
+				4724B01B1DFC8219003E9412 /* ImageManager.swift */,
+				4724B0111DFC6917003E9412 /* GoEuro-Bridging-Header.h */,
+				4724B0181DFC69B0003E9412 /* TimeDiff.h */,
+				4724B0191DFC69B0003E9412 /* TimeDiff.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -136,7 +193,11 @@
 		473B96161DFBDB7300173508 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				473B961C1DFBE83F00173508 /* Images.swift */,
 				473B95EB1DFBDB6400173508 /* Main.storyboard */,
+				473B95F01DFBDB6400173508 /* LaunchScreen.storyboard */,
+				4724B0241DFC90EA003E9412 /* CollectionCell.xib */,
+				4724B0291DFC9172003E9412 /* CollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -144,9 +205,22 @@
 		473B96171DFBDB7900173508 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				473B95E91DFBDB6300173508 /* ViewController.swift */,
+				473B96181DFBDE9900173508 /* RootViewController.swift */,
+				473B96201DFC06C600173508 /* FlightViewController.swift */,
+				473B96221DFC072100173508 /* BusViewController.swift */,
+				473B96241DFC073100173508 /* TrainViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		CB9857CB059422446EF6567A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C52B17F388E8163CF9537BEE /* Pods_GoEuro.framework */,
+				EB6053175BEC5FC0DDDEC591 /* Pods_GoEuroTests.framework */,
+				F442907AC509C2B7E2CDE4F1 /* Pods_GoEuroUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 473B960C1DFBDB6400173508 /* Build configuration list for PBXNativeTarget "GoEuro" */;
 			buildPhases = (
+				FF8242289F1F4A68B2DD2F4C /* [CP] Check Pods Manifest.lock */,
 				473B95E01DFBDB6300173508 /* Sources */,
 				473B95E11DFBDB6300173508 /* Frameworks */,
 				473B95E21DFBDB6300173508 /* Resources */,
+				0D3D9FE55514A57C4C5EE9A2 /* [CP] Embed Pods Frameworks */,
+				83AD24EAC8DD9C81992958BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +250,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 473B960F1DFBDB6400173508 /* Build configuration list for PBXNativeTarget "GoEuroTests" */;
 			buildPhases = (
+				246B5DEB166FCA057DE1247C /* [CP] Check Pods Manifest.lock */,
 				473B95F41DFBDB6400173508 /* Sources */,
 				473B95F51DFBDB6400173508 /* Frameworks */,
 				473B95F61DFBDB6400173508 /* Resources */,
+				F6DD9F870657BB1E8361FB88 /* [CP] Embed Pods Frameworks */,
+				6A222E445895772F3CB288E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,9 +271,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 473B96121DFBDB6400173508 /* Build configuration list for PBXNativeTarget "GoEuroUITests" */;
 			buildPhases = (
+				F7062349F128E8FFE707D11F /* [CP] Check Pods Manifest.lock */,
 				473B95FF1DFBDB6400173508 /* Sources */,
 				473B96001DFBDB6400173508 /* Frameworks */,
 				473B96011DFBDB6400173508 /* Resources */,
+				940919223FD3586C609F36E9 /* [CP] Embed Pods Frameworks */,
+				C1661A365062D3728871196C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,6 +301,7 @@
 					473B95E31DFBDB6300173508 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 5D8357SCSF;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					473B95F71DFBDB6400173508 = {
@@ -261,6 +345,7 @@
 			files = (
 				473B95F21DFBDB6400173508 /* LaunchScreen.storyboard in Resources */,
 				473B95EF1DFBDB6400173508 /* Assets.xcassets in Resources */,
+				4724B0251DFC90EA003E9412 /* CollectionCell.xib in Resources */,
 				473B95ED1DFBDB6400173508 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,13 +366,160 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D3D9FE55514A57C4C5EE9A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoEuro/Pods-GoEuro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		246B5DEB166FCA057DE1247C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6A222E445895772F3CB288E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoEuroTests/Pods-GoEuroTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83AD24EAC8DD9C81992958BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoEuro/Pods-GoEuro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		940919223FD3586C609F36E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoEuroUITests/Pods-GoEuroUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1661A365062D3728871196C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoEuroUITests/Pods-GoEuroUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6DD9F870657BB1E8361FB88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoEuroTests/Pods-GoEuroTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7062349F128E8FFE707D11F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF8242289F1F4A68B2DD2F4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		473B95E01DFBDB6300173508 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				473B95EA1DFBDB6300173508 /* ViewController.swift in Sources */,
 				473B95E81DFBDB6300173508 /* AppDelegate.swift in Sources */,
+				4724B01C1DFC8219003E9412 /* ImageManager.swift in Sources */,
+				470D6B3D1DFC4BEA005789B4 /* GoEuroData.swift in Sources */,
+				473B961D1DFBE83F00173508 /* Images.swift in Sources */,
+				470D6B3F1DFC4ED6005789B4 /* GoEuroStruct.swift in Sources */,
+				473B96231DFC072100173508 /* BusViewController.swift in Sources */,
+				4724B01A1DFC69B0003E9412 /* TimeDiff.m in Sources */,
+				473B96211DFC06C600173508 /* FlightViewController.swift in Sources */,
+				473B96191DFBDE9900173508 /* RootViewController.swift in Sources */,
+				473B96251DFC073100173508 /* TrainViewController.swift in Sources */,
+				4724B02A1DFC9172003E9412 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,32 +669,43 @@
 		};
 		473B960D1DFBDB6400173508 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E42363E5369EC5628F1EF5B /* Pods-GoEuro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5D8357SCSF;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = GoEuro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseyneronov.GoEuro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoEuro/GoEuro-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		473B960E1DFBDB6400173508 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F62A84F3DF94A10993ECB73E /* Pods-GoEuro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5D8357SCSF;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = GoEuro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseyneronov.GoEuro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoEuro/GoEuro-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		473B96101DFBDB6400173508 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B6405938632E692DDB0BCF7 /* Pods-GoEuroTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -478,6 +721,7 @@
 		};
 		473B96111DFBDB6400173508 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9D78F8A80D02162D4CF8CF6 /* Pods-GoEuroTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +737,7 @@
 		};
 		473B96131DFBDB6400173508 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0712B9DCC66AA97CA5C5D672 /* Pods-GoEuroUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 5D8357SCSF;
@@ -507,6 +752,7 @@
 		};
 		473B96141DFBDB6400173508 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35478907BC0CD1280E0227FE /* Pods-GoEuroUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 5D8357SCSF;
@@ -538,6 +784,7 @@
 				473B960E1DFBDB6400173508 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		473B960F1DFBDB6400173508 /* Build configuration list for PBXNativeTarget "GoEuroTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +793,7 @@
 				473B96111DFBDB6400173508 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		473B96121DFBDB6400173508 /* Build configuration list for PBXNativeTarget "GoEuroUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +802,7 @@
 				473B96141DFBDB6400173508 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

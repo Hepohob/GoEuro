@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZpP-rn-lCU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Train-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TrainViewController" customModule="GoEuro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,213 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayx-Qa-SJI">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Sort" id="hac-pC-q6j"/>
+                                </items>
+                                <color key="barTintColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tabBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yAc-dQ-c0t">
+                                <rect key="frame" x="0.0" y="100" width="375" height="518"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FNa-kk-FTo">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QQ9-h6-1XL">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9Mo-b5-FZ5"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="W5Z-bn-VNw"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ayx-Qa-SJI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2YZ-FM-3lf"/>
+                            <constraint firstItem="yAc-dQ-c0t" firstAttribute="bottom" secondItem="ayx-Qa-SJI" secondAttribute="top" id="B7B-Tk-wbS"/>
+                            <constraint firstItem="ayx-Qa-SJI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="EGX-4p-yX2"/>
+                            <constraint firstItem="yAc-dQ-c0t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ERc-DZ-wAk"/>
+                            <constraint firstItem="yAc-dQ-c0t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="G9v-G2-osV"/>
+                            <constraint firstItem="yAc-dQ-c0t" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="OUp-ld-CHq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ayx-Qa-SJI" secondAttribute="top" id="tYQ-20-RKq"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Train" id="eXp-UH-QfI"/>
+                    <connections>
+                        <outlet property="trainList" destination="yAc-dQ-c0t" id="jOK-DN-UQL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-196" y="732.68365817091455"/>
+        </scene>
+        <!--Bus-->
+        <scene sceneID="7TF-0N-oZd">
+            <objects>
+                <viewController id="RlH-n9-y2C" customClass="BusViewController" customModule="GoEuro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OgQ-Fn-vA3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q0c-4H-zBj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="THp-YB-2od">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYP-Sd-oBD">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Sort" id="TzD-6h-RcJ"/>
+                                </items>
+                                <color key="barTintColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tabBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xnW-c6-Ohv">
+                                <rect key="frame" x="0.0" y="100" width="375" height="518"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zoR-uJ-V3J">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="der-9v-zPh">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="RlH-n9-y2C" id="lbe-jB-ZNI"/>
+                                    <outlet property="delegate" destination="RlH-n9-y2C" id="vSL-X3-3eo"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="CYP-Sd-oBD" firstAttribute="width" secondItem="THp-YB-2od" secondAttribute="width" id="1Tv-x3-XX4"/>
+                            <constraint firstItem="xnW-c6-Ohv" firstAttribute="width" secondItem="THp-YB-2od" secondAttribute="width" id="4wl-Ym-QPs"/>
+                            <constraint firstItem="xnW-c6-Ohv" firstAttribute="bottom" secondItem="CYP-Sd-oBD" secondAttribute="top" id="8fk-05-yEg"/>
+                            <constraint firstItem="xnW-c6-Ohv" firstAttribute="centerX" secondItem="THp-YB-2od" secondAttribute="centerX" id="9Xc-5t-ows"/>
+                            <constraint firstItem="xnW-c6-Ohv" firstAttribute="top" secondItem="OgQ-Fn-vA3" secondAttribute="bottom" constant="80" id="JYe-8G-E9b"/>
+                            <constraint firstItem="Q0c-4H-zBj" firstAttribute="top" secondItem="CYP-Sd-oBD" secondAttribute="top" id="dd2-bj-Efw"/>
+                            <constraint firstItem="CYP-Sd-oBD" firstAttribute="centerX" secondItem="THp-YB-2od" secondAttribute="centerX" id="lMZ-Ve-3hy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bus" id="bdj-DX-mZa">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="busList" destination="xnW-c6-Ohv" id="2KK-FP-r0B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyy-wS-HQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605.60000000000002" y="243.32833583208398"/>
+        </scene>
+        <!--Flight-->
+        <scene sceneID="2ua-ro-aHs">
+            <objects>
+                <viewController id="wCZ-YP-nwS" customClass="FlightViewController" customModule="GoEuro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iX2-c4-MnM"/>
+                        <viewControllerLayoutGuide type="bottom" id="afy-DD-pSe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gpc-Ez-uNs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HhA-HO-AwE">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Sort" id="5O6-b4-exg"/>
+                                </items>
+                                <color key="barTintColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tabBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UNC-uM-ao4">
+                                <rect key="frame" x="-0.5" y="100" width="375" height="518"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pV5-8J-6dG">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="J6L-kt-FIB">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wCZ-YP-nwS" id="X9S-hQ-bTz"/>
+                                    <outlet property="delegate" destination="wCZ-YP-nwS" id="av0-mK-D0F"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="afy-DD-pSe" firstAttribute="top" secondItem="HhA-HO-AwE" secondAttribute="top" id="MRg-tO-qzT"/>
+                            <constraint firstItem="UNC-uM-ao4" firstAttribute="centerX" secondItem="gpc-Ez-uNs" secondAttribute="centerX" id="P3Y-9z-HhP"/>
+                            <constraint firstItem="UNC-uM-ao4" firstAttribute="top" secondItem="iX2-c4-MnM" secondAttribute="bottom" constant="80" id="TAs-o6-muT"/>
+                            <constraint firstItem="UNC-uM-ao4" firstAttribute="bottom" secondItem="HhA-HO-AwE" secondAttribute="top" id="fFA-dY-LMB"/>
+                            <constraint firstItem="HhA-HO-AwE" firstAttribute="centerX" secondItem="gpc-Ez-uNs" secondAttribute="centerX" id="gWh-bq-Gwd"/>
+                            <constraint firstItem="UNC-uM-ao4" firstAttribute="width" secondItem="gpc-Ez-uNs" secondAttribute="width" id="gfT-Nz-gYP"/>
+                            <constraint firstItem="HhA-HO-AwE" firstAttribute="width" secondItem="gpc-Ez-uNs" secondAttribute="width" id="mEk-pE-UE2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Flight" id="5t5-Ax-QjU"/>
+                    <connections>
+                        <outlet property="flightList" destination="UNC-uM-ao4" id="71a-4V-uJh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2n-jR-kP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605.60000000000002" y="-411.544227886057"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="hNo-bC-knd">
+            <objects>
+                <tabBarController id="ZpP-rn-lCU" customClass="RootViewController" customModule="GoEuro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" id="jor-8A-CTm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="tabBar" destination="jor-8A-CTm" id="5Et-6W-f2N"/>
+                        <outlet property="topBar" destination="jor-8A-CTm" id="s8o-zT-QwJ"/>
+                        <segue destination="wCZ-YP-nwS" kind="relationship" relationship="viewControllers" id="VWJ-St-MPb"/>
+                        <segue destination="RlH-n9-y2C" kind="relationship" relationship="viewControllers" id="LrT-JG-SCC"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="B7P-Vq-ZZ7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYI-tn-IzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-345" y="-83"/>
         </scene>
     </scenes>
 </document>
