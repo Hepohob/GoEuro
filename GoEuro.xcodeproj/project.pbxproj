@@ -97,9 +97,10 @@
 		473B95E61DFBDB6300173508 /* GoEuro */ = {
 			isa = PBXGroup;
 			children = (
+				473B96171DFBDB7900173508 /* Controller */,
+				473B96161DFBDB7300173508 /* View */,
+				473B96151DFBDB6D00173508 /* Model */,
 				473B95E71DFBDB6300173508 /* AppDelegate.swift */,
-				473B95E91DFBDB6300173508 /* ViewController.swift */,
-				473B95EB1DFBDB6400173508 /* Main.storyboard */,
 				473B95EE1DFBDB6400173508 /* Assets.xcassets */,
 				473B95F01DFBDB6400173508 /* LaunchScreen.storyboard */,
 				473B95F31DFBDB6400173508 /* Info.plist */,
@@ -123,6 +124,29 @@
 				473B96091DFBDB6400173508 /* Info.plist */,
 			);
 			path = GoEuroUITests;
+			sourceTree = "<group>";
+		};
+		473B96151DFBDB6D00173508 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		473B96161DFBDB7300173508 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				473B95EB1DFBDB6400173508 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		473B96171DFBDB7900173508 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				473B95E91DFBDB6300173508 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
