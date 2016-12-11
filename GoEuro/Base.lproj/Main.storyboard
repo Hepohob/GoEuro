@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,14 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayx-Qa-SJI">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Sort" id="hac-pC-q6j"/>
-                                </items>
-                                <color key="barTintColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tabBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yAc-dQ-c0t">
                                 <rect key="frame" x="0.0" y="100" width="375" height="518"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,20 +46,40 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="W5Z-bn-VNw"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NaG-jY-1D9">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quS-Os-wil">
+                                <rect key="frame" x="16" y="618" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BKN-DX-Ljy"/>
+                                    <constraint firstAttribute="height" constant="50" id="q3O-0V-dNK"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Sort" image="sort">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressSort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AuQ-tJ-Frl"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ayx-Qa-SJI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2YZ-FM-3lf"/>
-                            <constraint firstItem="yAc-dQ-c0t" firstAttribute="bottom" secondItem="ayx-Qa-SJI" secondAttribute="top" id="B7B-Tk-wbS"/>
-                            <constraint firstItem="ayx-Qa-SJI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="EGX-4p-yX2"/>
                             <constraint firstItem="yAc-dQ-c0t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ERc-DZ-wAk"/>
                             <constraint firstItem="yAc-dQ-c0t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="G9v-G2-osV"/>
                             <constraint firstItem="yAc-dQ-c0t" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="OUp-ld-CHq"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ayx-Qa-SJI" secondAttribute="top" id="tYQ-20-RKq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="quS-Os-wil" secondAttribute="bottom" constant="-50" id="Vmc-uM-FaV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yAc-dQ-c0t" secondAttribute="bottom" id="Wmu-UX-6Cu"/>
+                            <constraint firstItem="NaG-jY-1D9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bUh-Md-h2a"/>
+                            <constraint firstItem="quS-Os-wil" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dRh-WU-Rlp"/>
+                            <constraint firstItem="NaG-jY-1D9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="enq-SH-P9z"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Train" id="eXp-UH-QfI"/>
                     <connections>
+                        <outlet property="buttonSort" destination="quS-Os-wil" id="JIG-h5-Uqb"/>
+                        <outlet property="indicator" destination="NaG-jY-1D9" id="Ezm-JJ-Acy"/>
                         <outlet property="trainList" destination="yAc-dQ-c0t" id="jOK-DN-UQL"/>
                     </connections>
                 </viewController>
@@ -86,14 +99,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYP-Sd-oBD">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Sort" id="TzD-6h-RcJ"/>
-                                </items>
-                                <color key="barTintColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tabBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xnW-c6-Ohv">
                                 <rect key="frame" x="0.0" y="100" width="375" height="518"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,15 +123,34 @@
                                     <outlet property="delegate" destination="RlH-n9-y2C" id="vSL-X3-3eo"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="25T-VX-QRb">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYG-pB-zxL">
+                                <rect key="frame" x="16" y="618" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Iuv-ja-7zD"/>
+                                    <constraint firstAttribute="height" constant="50" id="kBz-a2-mvB"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Sort" image="sort">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressSort:" destination="RlH-n9-y2C" eventType="touchUpInside" id="sG1-go-i8s"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CYP-Sd-oBD" firstAttribute="width" secondItem="THp-YB-2od" secondAttribute="width" id="1Tv-x3-XX4"/>
                             <constraint firstItem="xnW-c6-Ohv" firstAttribute="width" secondItem="THp-YB-2od" secondAttribute="width" id="4wl-Ym-QPs"/>
-                            <constraint firstItem="xnW-c6-Ohv" firstAttribute="bottom" secondItem="CYP-Sd-oBD" secondAttribute="top" id="8fk-05-yEg"/>
                             <constraint firstItem="xnW-c6-Ohv" firstAttribute="centerX" secondItem="THp-YB-2od" secondAttribute="centerX" id="9Xc-5t-ows"/>
+                            <constraint firstItem="Q0c-4H-zBj" firstAttribute="top" secondItem="kYG-pB-zxL" secondAttribute="bottom" constant="-50" id="Ee0-bI-0b5"/>
+                            <constraint firstItem="25T-VX-QRb" firstAttribute="centerX" secondItem="THp-YB-2od" secondAttribute="centerX" id="HOU-Tx-ylL"/>
                             <constraint firstItem="xnW-c6-Ohv" firstAttribute="top" secondItem="OgQ-Fn-vA3" secondAttribute="bottom" constant="80" id="JYe-8G-E9b"/>
-                            <constraint firstItem="Q0c-4H-zBj" firstAttribute="top" secondItem="CYP-Sd-oBD" secondAttribute="top" id="dd2-bj-Efw"/>
-                            <constraint firstItem="CYP-Sd-oBD" firstAttribute="centerX" secondItem="THp-YB-2od" secondAttribute="centerX" id="lMZ-Ve-3hy"/>
+                            <constraint firstItem="Q0c-4H-zBj" firstAttribute="top" secondItem="xnW-c6-Ohv" secondAttribute="bottom" id="QmP-Xa-1nE"/>
+                            <constraint firstItem="kYG-pB-zxL" firstAttribute="leading" secondItem="THp-YB-2od" secondAttribute="leadingMargin" id="RfC-Ff-puC"/>
+                            <constraint firstItem="25T-VX-QRb" firstAttribute="centerY" secondItem="THp-YB-2od" secondAttribute="centerY" id="odb-zu-pHJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bus" id="bdj-DX-mZa">
@@ -134,6 +158,8 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="busList" destination="xnW-c6-Ohv" id="2KK-FP-r0B"/>
+                        <outlet property="buttonSort" destination="kYG-pB-zxL" id="Td1-6D-00s"/>
+                        <outlet property="indicator" destination="25T-VX-QRb" id="h4z-dU-BWc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyy-wS-HQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,16 +178,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HhA-HO-AwE">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Sort" id="5O6-b4-exg"/>
-                                </items>
-                                <color key="barTintColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tabBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UNC-uM-ao4">
-                                <rect key="frame" x="-0.5" y="100" width="375" height="518"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="518"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pV5-8J-6dG">
                                     <size key="itemSize" width="50" height="50"/>
@@ -184,21 +202,42 @@
                                     <outlet property="delegate" destination="wCZ-YP-nwS" id="av0-mK-D0F"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="QAt-Yb-eap">
+                                <rect key="frame" x="177.5" y="74" width="20" height="518"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdP-oV-5rq">
+                                <rect key="frame" x="16" y="618" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="4Ee-r7-svH"/>
+                                    <constraint firstAttribute="height" constant="50" id="bmB-h0-dhX"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Sort" image="sort">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressSort:" destination="wCZ-YP-nwS" eventType="touchUpInside" id="UMN-Eb-e1o"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="afy-DD-pSe" firstAttribute="top" secondItem="HhA-HO-AwE" secondAttribute="top" id="MRg-tO-qzT"/>
+                            <constraint firstItem="QAt-Yb-eap" firstAttribute="centerX" secondItem="gpc-Ez-uNs" secondAttribute="centerX" id="8QF-ZN-W1w"/>
+                            <constraint firstItem="afy-DD-pSe" firstAttribute="top" secondItem="AdP-oV-5rq" secondAttribute="bottom" constant="-50" id="Fyv-hQ-rwK"/>
+                            <constraint firstItem="afy-DD-pSe" firstAttribute="top" secondItem="UNC-uM-ao4" secondAttribute="bottom" id="MuL-ft-25P"/>
                             <constraint firstItem="UNC-uM-ao4" firstAttribute="centerX" secondItem="gpc-Ez-uNs" secondAttribute="centerX" id="P3Y-9z-HhP"/>
                             <constraint firstItem="UNC-uM-ao4" firstAttribute="top" secondItem="iX2-c4-MnM" secondAttribute="bottom" constant="80" id="TAs-o6-muT"/>
-                            <constraint firstItem="UNC-uM-ao4" firstAttribute="bottom" secondItem="HhA-HO-AwE" secondAttribute="top" id="fFA-dY-LMB"/>
-                            <constraint firstItem="HhA-HO-AwE" firstAttribute="centerX" secondItem="gpc-Ez-uNs" secondAttribute="centerX" id="gWh-bq-Gwd"/>
+                            <constraint firstItem="AdP-oV-5rq" firstAttribute="leading" secondItem="gpc-Ez-uNs" secondAttribute="leadingMargin" id="VQV-lY-bed"/>
+                            <constraint firstItem="QAt-Yb-eap" firstAttribute="centerY" secondItem="gpc-Ez-uNs" secondAttribute="centerY" id="ZVT-as-eIS"/>
                             <constraint firstItem="UNC-uM-ao4" firstAttribute="width" secondItem="gpc-Ez-uNs" secondAttribute="width" id="gfT-Nz-gYP"/>
-                            <constraint firstItem="HhA-HO-AwE" firstAttribute="width" secondItem="gpc-Ez-uNs" secondAttribute="width" id="mEk-pE-UE2"/>
+                            <constraint firstItem="afy-DD-pSe" firstAttribute="top" secondItem="QAt-Yb-eap" secondAttribute="bottom" constant="26" id="st3-K1-M7g"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Flight" id="5t5-Ax-QjU"/>
                     <connections>
+                        <outlet property="buttonSort" destination="AdP-oV-5rq" id="dkl-wJ-ZMG"/>
                         <outlet property="flightList" destination="UNC-uM-ao4" id="71a-4V-uJh"/>
+                        <outlet property="indicator" destination="QAt-Yb-eap" id="iqW-Ff-iBA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2n-jR-kP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,4 +268,7 @@
             <point key="canvasLocation" x="-345" y="-83"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sort" width="50" height="50"/>
+    </resources>
 </document>

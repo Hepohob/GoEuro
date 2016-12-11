@@ -7,15 +7,20 @@
 //
 
 import Foundation
+import CoreData
+
+var listBuses = Array<GoEuroStruct>()
+var listTrains = Array<GoEuroStruct>()
+var listFlights = Array<GoEuroStruct>()
+
 
 class GoEuroData {
     
-    func getTransport(by type:GoEuroStruct.TransportType,
+    func getTransport(by type:TransportType,
                       successHandler: @escaping (_ transportArray: Array<GoEuroStruct>) -> (),
                          failHandler: @escaping (_ error: Error) -> ())
     {
         var url = ""
-        
         switch type {
         case .flight:
             url = "https://api.myjson.com/bins/w60i"
@@ -65,16 +70,23 @@ class GoEuroData {
                             }
                             price = "€\(prc)"
                         }
-                          if var add = GoEuroStruct(logo: url,
-                                                  departureTime: element["departure_time"] as! String? ?? "",
-                                                  arrivalTime: element["arrival_time"] as! String? ?? "",
-                                                  changes: changes,
-                                                  price: price,
-                                                  duration: "",
-                                                  type: type) as GoEuroStruct?{
+                        let add = GoEuroStruct(logo: url,
+                                              departureTime: element["departure_time"] as! String? ?? "",
+                                              arrivalTime: element["arrival_time"] as! String? ?? "",
+                                              changes: changes,
+                                              price: price,
+                                              duration: "")
                             add.duration = TimeDiff.departure(add.departureTime, andArrival: add.arrivalTime)
                             resultArray += [add]
-                        }
+                        
+                    }
+                    switch type {
+                    case .flight:
+                        listFlights = resultArray
+                     case .bus:
+                        listBuses = resultArray
+                    case .train:
+                        listTrains = resultArray
                     }
                     successHandler(resultArray)
                     return
@@ -87,6 +99,31 @@ class GoEuroData {
         }
         
         task.resume()
+    }
+    
+    
+    func store(list:Array<GoEuroStruct>, key:String) {
+        
+        let moc = DataController().managedObjectContext
+        let entity = NSEntityDescription.entity(forEntityName: "Entity",
+                                                in: moc)
+
+        let options = NSManagedObject(entity: entity!,
+                                      insertInto:moc)
+        if let arr = list as Array<GoEuroStruct>? {
+            let data = NSKeyedArchiver.archivedData(withRootObject: arr) as NSData
+            options.setValue(data, forKey: key)
+        }
+        
+        if moc.hasChanges {
+            do {
+                try moc.save()
+            } catch {
+                let nserror = error as NSError
+                print("Unresolved error \(nserror), \(nserror.userInfo)")
+                abort()
+            }
+        }
     }
 
 }

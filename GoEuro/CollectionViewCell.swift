@@ -19,6 +19,12 @@ class CollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        imageView?.image = nil
+        timeLabel?.text = nil
+        priceLabel?.text = nil
+        changesLabel?.text = nil
+        durationLabel?.text = nil
+        indicator?.startAnimating()
     }
     
     override func prepareForReuse() {
@@ -31,4 +37,15 @@ class CollectionViewCell: UICollectionViewCell {
         indicator?.startAnimating()
     }
     
+    func set(with image:UIImage, time:String, price:String, changes:String, duration:String) {
+        let attribute = [ NSFontAttributeName: UIFont(name: "Arial-BoldMT", size: 17.0)! ]
+        let string = NSMutableAttributedString(string: "\(price)")
+        let range = NSRange(location: price.characters.count - 2, length: 2)
+        string.addAttributes(attribute, range: range)
+        self.priceLabel?.attributedText = string
+        self.changesLabel?.text = changes
+        self.durationLabel?.text = duration
+        self.timeLabel?.text = time
+        self.imageView?.image = image
+    }
 }

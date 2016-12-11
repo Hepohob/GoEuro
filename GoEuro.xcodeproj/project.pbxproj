@@ -13,6 +13,11 @@
 		4724B01C1DFC8219003E9412 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724B01B1DFC8219003E9412 /* ImageManager.swift */; };
 		4724B0251DFC90EA003E9412 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4724B0241DFC90EA003E9412 /* CollectionCell.xib */; };
 		4724B02A1DFC9172003E9412 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724B0291DFC9172003E9412 /* CollectionViewCell.swift */; };
+		4724B02C1DFD5D79003E9412 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4724B02B1DFD5D79003E9412 /* Media.xcassets */; };
+		4724B02F1DFD6D0D003E9412 /* TransportData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4724B02D1DFD6D0C003E9412 /* TransportData.xcdatamodeld */; };
+		4724B0311DFD8D94003E9412 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4724B0301DFD8D94003E9412 /* CoreData.framework */; };
+		4724B0331DFD8DFD003E9412 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724B0321DFD8DFD003E9412 /* DataController.swift */; };
+		4724B0351DFDCD32003E9412 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724B0341DFDCD32003E9412 /* Connection.swift */; };
 		473B95E81DFBDB6300173508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473B95E71DFBDB6300173508 /* AppDelegate.swift */; };
 		473B95ED1DFBDB6400173508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473B95EB1DFBDB6400173508 /* Main.storyboard */; };
 		473B95EF1DFBDB6400173508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473B95EE1DFBDB6400173508 /* Assets.xcassets */; };
@@ -58,6 +63,11 @@
 		4724B01B1DFC8219003E9412 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		4724B0241DFC90EA003E9412 /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
 		4724B0291DFC9172003E9412 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		4724B02B1DFD5D79003E9412 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		4724B02E1DFD6D0D003E9412 /* TransportData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TransportData.xcdatamodel; sourceTree = "<group>"; };
+		4724B0301DFD8D94003E9412 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4724B0321DFD8DFD003E9412 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		4724B0341DFDCD32003E9412 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		473B95E41DFBDB6300173508 /* GoEuro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoEuro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		473B95E71DFBDB6300173508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		473B95EC1DFBDB6400173508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4724B0311DFD8D94003E9412 /* CoreData.framework in Frameworks */,
 				B3D5ECA3F418649350EAF5AE /* Pods_GoEuro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +166,7 @@
 				473B95E71DFBDB6300173508 /* AppDelegate.swift */,
 				473B95EE1DFBDB6400173508 /* Assets.xcassets */,
 				473B95F31DFBDB6400173508 /* Info.plist */,
+				4724B02B1DFD5D79003E9412 /* Media.xcassets */,
 			);
 			path = GoEuro;
 			sourceTree = "<group>";
@@ -180,12 +192,15 @@
 		473B96151DFBDB6D00173508 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4724B02D1DFD6D0C003E9412 /* TransportData.xcdatamodeld */,
 				470D6B3C1DFC4BEA005789B4 /* GoEuroData.swift */,
 				470D6B3E1DFC4ED6005789B4 /* GoEuroStruct.swift */,
 				4724B01B1DFC8219003E9412 /* ImageManager.swift */,
 				4724B0111DFC6917003E9412 /* GoEuro-Bridging-Header.h */,
 				4724B0181DFC69B0003E9412 /* TimeDiff.h */,
 				4724B0191DFC69B0003E9412 /* TimeDiff.m */,
+				4724B0321DFD8DFD003E9412 /* DataController.swift */,
+				4724B0341DFDCD32003E9412 /* Connection.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -216,6 +231,7 @@
 		CB9857CB059422446EF6567A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4724B0301DFD8D94003E9412 /* CoreData.framework */,
 				C52B17F388E8163CF9537BEE /* Pods_GoEuro.framework */,
 				EB6053175BEC5FC0DDDEC591 /* Pods_GoEuroTests.framework */,
 				F442907AC509C2B7E2CDE4F1 /* Pods_GoEuroUITests.framework */,
@@ -343,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4724B02C1DFD5D79003E9412 /* Media.xcassets in Resources */,
 				473B95F21DFBDB6400173508 /* LaunchScreen.storyboard in Resources */,
 				473B95EF1DFBDB6400173508 /* Assets.xcassets in Resources */,
 				4724B0251DFC90EA003E9412 /* CollectionCell.xib in Resources */,
@@ -510,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				473B95E81DFBDB6300173508 /* AppDelegate.swift in Sources */,
+				4724B02F1DFD6D0D003E9412 /* TransportData.xcdatamodeld in Sources */,
 				4724B01C1DFC8219003E9412 /* ImageManager.swift in Sources */,
 				470D6B3D1DFC4BEA005789B4 /* GoEuroData.swift in Sources */,
 				473B961D1DFBE83F00173508 /* Images.swift in Sources */,
@@ -519,7 +537,9 @@
 				473B96211DFC06C600173508 /* FlightViewController.swift in Sources */,
 				473B96191DFBDE9900173508 /* RootViewController.swift in Sources */,
 				473B96251DFC073100173508 /* TrainViewController.swift in Sources */,
+				4724B0331DFD8DFD003E9412 /* DataController.swift in Sources */,
 				4724B02A1DFC9172003E9412 /* CollectionViewCell.swift in Sources */,
+				4724B0351DFDCD32003E9412 /* Connection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +825,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4724B02D1DFD6D0C003E9412 /* TransportData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4724B02E1DFD6D0D003E9412 /* TransportData.xcdatamodel */,
+			);
+			currentVersion = 4724B02E1DFD6D0D003E9412 /* TransportData.xcdatamodel */;
+			name = TransportData.xcdatamodeld;
+			path = ../TransportData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 473B95DC1DFBDB6300173508 /* Project object */;
 }

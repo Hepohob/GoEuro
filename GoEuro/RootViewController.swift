@@ -38,10 +38,15 @@ class RootViewController: UITabBarController {
             UITabBarItem.appearance().setTitleTextAttributes(attributes, for: .normal)
         }
         titleLabel = putLabel(at: CGRect(x: 0, y: 20, width: self.view.bounds.size.width, height: 15),
-                              text: "Origin - Destination")
+                              text: "Berlin - Munich")
         self.view.addSubview(titleLabel)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd"
+        let timeStamp = dateFormatter.string(from: Date())
+        
         dateLabel = putLabel(at: CGRect(x: 0, y: 36, width: self.view.bounds.size.width, height: 15),
-                              text: "jun 07")
+                              text: "\(timeStamp)")
         self.view.addSubview(dateLabel)
     }
 
@@ -70,16 +75,6 @@ class RootViewController: UITabBarController {
         return label
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 

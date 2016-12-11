@@ -11,27 +11,38 @@ import UIKit
 class TrainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet var trainList:UICollectionView?
-    
+    @IBOutlet var indicator:UIActivityIndicatorView?
+    @IBOutlet var buttonSort:UIButton?
+
     var list = Array<GoEuroStruct>()
     let reuseIdentifier = "cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if listTrains.count > 0 {
+            list = listTrains
+            self.trainList?.reloadData()
+            self.indicator?.stopAnimating()
+        }
+
         trainList?.register(UINib(nibName: "CollectionCell", bundle:nil), forCellWithReuseIdentifier: reuseIdentifier)
         trainList?.frame = self.view.frame
         
-        let manager = GoEuroData()
-        manager.getTransport(by:.train,
-                             successHandler: { (result) in
-                                self.list = result
-                                self.trainList?.reloadData()
-        },
-                             
-                             failHandler: {(error) in
-                                print(error)
-                                
-        })
+        if Connection.isOn() {
+            let manager = GoEuroData()
+            manager.getTransport(by:.train,
+                                 successHandler: { (result) in
+                                    self.list = result
+                                    self.trainList?.reloadData()
+                                    self.indicator?.stopAnimating()
+            },
+                                 
+                                 failHandler: {(error) in
+                                    print(error)
+                                    
+            })
+        }
     }
     
     // MARK: - UICollectionViewDataSource protocol
@@ -44,25 +55,21 @@ class TrainViewController: UIViewController, UICollectionViewDataSource, UIColle
     // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CollectionViewCell
         if let item = self.list[indexPath.item] as GoEuroStruct? {
-            cell.timeLabel?.text = "\(item.departureTime) - \(item.arrivalTime)"
-            cell.priceLabel?.text = "\(item.price)"
-            cell.changesLabel?.text = "\(item.changes)"
-            cell.durationLabel?.text = "\(item.duration)"
-            
             if let strURL = item.logo as String? {
                 ImageManager.loadImage(strUrl: strURL) {(image, _ ) in
                     if let image = image {
-                        cell.imageView?.image = image
                         cell.indicator?.stopAnimating()
+                        cell.set(with: image,
+                                 time:"\(item.departureTime) - \(item.arrivalTime)",
+                            price: item.price,
+                            changes: item.changes,
+                            duration: item.duration)
                     }
                 }
             }
-            
         }
-        
         
         return cell
     }
@@ -86,4 +93,10 @@ class TrainViewController: UIViewController, UICollectionViewDataSource, UIColle
             layout.invalidateLayout()
         }
     }
+    
+    @IBAction func pressSort(_ sender: UIButton) {
+        list.sort(by: {$0.price < $1.price})
+        trainList?.reloadData()
+    }
+
 }
