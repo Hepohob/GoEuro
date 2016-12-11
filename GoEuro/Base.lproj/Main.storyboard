@@ -235,7 +235,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Flight" id="5t5-Ax-QjU"/>
                     <connections>
-                        <outlet property="buttonSort" destination="AdP-oV-5rq" id="dkl-wJ-ZMG"/>
+                        <outlet property="buttonSort" destination="AdP-oV-5rq" id="izu-GC-PO3"/>
                         <outlet property="flightList" destination="UNC-uM-ao4" id="71a-4V-uJh"/>
                         <outlet property="indicator" destination="QAt-Yb-eap" id="iqW-Ff-iBA"/>
                     </connections>

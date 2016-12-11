@@ -57,15 +57,16 @@ class TrainViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CollectionViewCell
         if let item = self.list[indexPath.item] as GoEuroStruct? {
+            cell.indicator?.stopAnimating()
+            cell.set(time:"\(item.departureTime) - \(item.arrivalTime)",
+                price: item.price,
+                changes: item.changes,
+                duration: item.duration)
+            
             if let strURL = item.logo as String? {
                 ImageManager.loadImage(strUrl: strURL) {(image, _ ) in
                     if let image = image {
-                        cell.indicator?.stopAnimating()
-                        cell.set(with: image,
-                                 time:"\(item.departureTime) - \(item.arrivalTime)",
-                            price: item.price,
-                            changes: item.changes,
-                            duration: item.duration)
+                        cell.imageView?.image = image
                     }
                 }
             }

@@ -46,7 +46,7 @@
                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zN7-OI-gJM">
                         <rect key="frame" x="97.5" y="33" width="20" height="20"/>
                     </activityIndicatorView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z2D-Uz-Mac">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nologo" translatesAutoresizingMaskIntoConstraints="NO" id="z2D-Uz-Mac">
                         <rect key="frame" x="20" y="20" width="175" height="45"/>
                     </imageView>
                 </subviews>
@@ -80,4 +80,7 @@
             <point key="canvasLocation" x="22" y="65"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="nologo" width="2000" height="863"/>
+    </resources>
 </document>

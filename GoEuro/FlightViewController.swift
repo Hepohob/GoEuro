@@ -47,25 +47,24 @@ class FlightViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     // MARK: - UICollectionViewDataSource protocol
     
-    // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.list.count
     }
     
-    // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CollectionViewCell
         if let item = self.list[indexPath.item] as GoEuroStruct? {
+            cell.indicator?.stopAnimating()
+            cell.set(time:"\(item.departureTime) - \(item.arrivalTime)",
+                    price: item.price,
+                    changes: item.changes,
+                    duration: item.duration)
+
             if let strURL = item.logo as String? {
                 ImageManager.loadImage(strUrl: strURL) {(image, _ ) in
                     if let image = image {
-                        cell.indicator?.stopAnimating()
-                        cell.set(with: image,
-                                 time:"\(item.departureTime) - \(item.arrivalTime)",
-                                 price: item.price,
-                                 changes: item.changes,
-                                 duration: item.duration)
+                        cell.imageView?.image = image
                     }
                 }
             }
@@ -77,7 +76,7 @@ class FlightViewController: UIViewController, UICollectionViewDataSource, UIColl
     // MARK: - UICollectionViewDelegate protocol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // handle tap events
+        
         let alert = UIAlertController(title: "Warning!", message: "Offer details are not yet implemented!", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok.", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
